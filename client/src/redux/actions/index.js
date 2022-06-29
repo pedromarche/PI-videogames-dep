@@ -44,7 +44,7 @@ export function getAllGames(){ // trae todos los juegos
 //         return fetch (`http://localhost:3001/videogames?name=${name}`)
 //             .then(response => response.json())
 //             .then(data => dispatch({type: GET_NAME, payload: data}));
-//     }catch(error){
+//     }catch(e){
 //         console.log(error)
 //     }
 // };
