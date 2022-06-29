@@ -9,11 +9,11 @@ export const FILTER_NAME = 'FILTER_NAME';
 export const FILTER_GENRE = 'FILTER_GENRE';
 export const FILTER_ORIGIN = 'FILTER_ORIGIN';
 export const CLEAR_PAGE = 'CLEAR_PAGE';
-const url = "https://pivideogamespedro.herokuapp.com"
+let URL = "https://pivideogamespedro.herokuapp.com"
 export function getAllGames(){ // trae todos los juegos
     return async function (dispatch) {
         try {
-          let result = await axios.get(`${process.env.REACT_APP_API}/videogames`);
+          let result = await axios.get(URL + `/videogames`);
           console.log("getAllVideogames ");
           return dispatch({
             type: GET_ALL_GAMES,
