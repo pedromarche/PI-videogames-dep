@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+} */
+.nav-links{
+    /* display: flex; */
+    /* background-color: rgba(233, 250, 0, 0.445); */
+    position: relative;
+    height: 60px;
+
+}
+.lint{
+    
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 15px;
+    
+}
+.batt {
+    padding: 0.9em 1.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: transparent;
+    border: 3px solid #ff0;
+    font-size: 8px;
+    position: relative;
+    font-family: Suwannaphum;
+    background: transparent;
+    
+  
+   }
+   
+   .batt::before {
+    content: "Crea tu juego";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    color: #ff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+   }
+   
+   .batt:hover::before {
+    left: 100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+   }
+   
+   .batt::after {
+    content: "Crea tu juego";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    color: #ff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: scale(0) rotateY(0deg);
+    opacity: 0;
+   }
+   
+   .batt:hover::after {
+    left: 0;
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+   }
+   
+.filt{
+    /* background-color:rgba(128, 255, 0, 0.575); */
+    width: 500px;
+    position: relative;
+    display: inline-block;
+    margin-left: 300px;
+    margin-top: 20px;
+    
+}
+.rr{
+    /* background-color: orange; */
+    display: inline-block;
+   margin-left: 10px;
+   margin-right: 10px;
+   /* color:#ff0;
+   background-color: rgb(0, 0, 0); */
+}
+.serch {
+  /* background-color: aqua; */
+  position:relative;
+  margin-right:5px;
+  width: 300px;
+  display: inline-block;
+
+   }
+.sach{
+    position: absolute;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-family: Suwannaphum;
+}
+.misma{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.dd{
+    background-color: rgba(0, 0, 0, 0.479);
+    color:#ff0;
+    border-color: #ff0;
+}
