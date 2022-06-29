@@ -13,7 +13,7 @@ const url = "https://pivideogamespedro.herokuapp.com"
 export function getAllGames(){ // trae todos los juegos
     return async function (dispatch) {
         try {
-          let result = await axios.get(process.env.REACT_APP_API + `/videogames`);
+          let result = await axios.get(`${process.env.REACT_APP_API}/videogames`);
           console.log("getAllVideogames ");
           return dispatch({
             type: GET_ALL_GAMES,
@@ -51,21 +51,21 @@ export function getAllGames(){ // trae todos los juegos
 
 export function getAllGenres(){ //trae todos los generos
     return async function(dispatch){
-        var json = await axios(process.env.REACT_APP_API +`/genres`);
+        var json = await axios(`${process.env.REACT_APP_API}/genres`);
         return dispatch({type: GET_ALL_GENRES, payload: json.data});
     }
 };
 
 export function gameDetail(id){ //trae por id por params
     return async function(dispatch){
-    var json = await axios(process.env.REACT_APP_API +`/videogame/${id}`);
+    var json = await axios(`${process.env.REACT_APP_API}/videogame/${id}`);
     return dispatch({type: GAME_DETAIL, payload: json.data})
     }
 }; 
 
 export function createGame(payload){ //crear juego
     return async function(dispatch){
-        var json = await axios.post(process.env.REACT_APP_API +`/videogame`, payload)
+        var json = await axios.post(`${process.env.REACT_APP_API}/videogame`, payload)
         return json;
     }
 }
@@ -105,7 +105,7 @@ export function clearPage(){
 
 export const getName = (name) => dispatch => { // busca por name
   
-        return fetch (process.env.REACT_APP_API +`/videogames?name=${name}`)
+        return fetch (`${process.env.REACT_APP_API}/videogames?name=${name}`)
             .then(response => response.json())
             .then(data => dispatch({type: GET_NAME, payload: data}))
             .catch(e => console.log(e))   
